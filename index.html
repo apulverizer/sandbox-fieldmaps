@@ -8,11 +8,52 @@
     <script type="module" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.js"></script>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.49/dist/calcite/calcite.css"/>
-    
+    <link rel="stylesheet" type="text/css" href="local.css"/>
 </head>
-<body>
+<body class="canvas">
 
 
+
+<calcite-action
+  class="button-warpper"
+  appearance="solid"
+  dir="ltr"
+  icon="mega-phone"
+  indicator=""
+  label="Label"
+  scale="m"
+  text="What's New"
+  text-enabled=""
+  theme="dark"
+></calcite-action>
+
+
+<calcite-tip-manager
+  class="whats-new-wrapper"
+  dir="ltr"
+  intl-close="Close"
+  intl-default-title="What's new in Field Maps 9.1.0"
+  intl-pagination-label=""
+  intl-next="Next"
+  intl-previous="Previous"
+  theme="light"
+>
+  <calcite-tip-group group-title="What's new in Field Maps 9.1.0">
+    <calcite-tip heading="New Input Type: Barcode Scanners">
+      <p>
+        This tip has an image that is a pretty tall. And the text will run out
+        before the end of the image.
+      </p>
+    </calcite-tip>
+    <calcite-tip heading="New Input Type: Radio Buttons">
+      <p>
+        This tip has an image that is a pretty tall. And the text will run out
+        before the end of the image.
+      </p>
+    </calcite-tip>    
+  </calcite-tip-group>
+
+</calcite-tip-manager>
 
 </body>
 </html>

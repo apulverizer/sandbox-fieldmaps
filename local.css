@@ -1,0 +1,13 @@
+.canvas {
+    background: #f3f3f3;
+}
+
+.button-warpper {
+    width: 200px;
+    margin: 20px;
+  }
+
+.whats-new-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
