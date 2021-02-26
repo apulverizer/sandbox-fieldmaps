@@ -1,0 +1,5 @@
+:root {
+    display: block;
+    --calcite-tip-manager-height: 600px !important;
+    --calcite-tip-max-width: 240px !important;
+  }
