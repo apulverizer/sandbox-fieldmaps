@@ -43,6 +43,58 @@
 
     </calcite-action-bar>
     <p>My Leading Panel</p>
+
+    <calcite-pick-list dir="ltr" theme="light">
+      <calcite-pick-list-item
+        label="T. Rex"
+        description="arm strength impaired"
+        value="trex"
+      >
+      <calcite-action
+        slot="actions-end"
+        label="click-me"
+        onclick="console.log('clicked');"
+        appearance="clear"
+        scale="s"
+        icon="information"
+      ></calcite-action>
+      <calcite-action
+          slot="actions-end"
+          label="click-me"
+          onclick="console.log('clicked');"
+          appearance="clear"
+          scale="s"
+          icon="information"
+        ></calcite-action>
+      </calcite-pick-list-item>
+      <calcite-pick-list-item
+        label="Triceratops"
+        description="3 horn"
+        value="triceratops"
+        selected=""
+      >
+        <calcite-action
+          slot="actions-end"
+          label="click-me"
+          onclick="console.log('clicked');"
+          appearance="clear"
+          scale="s"
+          icon="information"
+        ></calcite-action>
+      </calcite-pick-list-item>
+      <calcite-pick-list-item label="hi" description="there" value="helloWorld">
+        <calcite-action
+          slot="actions-end"
+          label="click-me"
+          onclick="console.log('clicked');"
+          appearance="clear"
+          scale="s"
+          icon="information"
+        ></calcite-action>
+      </calcite-pick-list-item>
+    </calcite-pick-list>
+
+
   </calcite-shell-panel>
 
 
