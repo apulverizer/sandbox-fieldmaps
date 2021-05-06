@@ -42,57 +42,150 @@
       </calcite-action-group>
 
     </calcite-action-bar>
-    <p>My Leading Panel</p>
 
-    <calcite-pick-list dir="ltr" theme="light">
-      <calcite-pick-list-item
-        label="T. Rex"
-        description="arm strength impaired"
-        value="trex"
-      >
+
+
+    <h4 class="wider">Value List</h4>
+
+    <calcite-value-list
+    dir="ltr"
+    theme="light"
+    aria-busy="false"
+    aria-disabled="false"
+    role="menu"
+  >
+    <calcite-value-list-item
+      label="Dogs"
+      description="Man's best friend"
+      value="dogs"
+      data-id="calcite-value-list-item-482406e2-8188-deb5-fa54-7320df121c4e"
+    >
       <calcite-action
         slot="actions-end"
         label="click-me"
         onclick="console.log('clicked');"
         appearance="clear"
         scale="s"
-        icon="information"
+        icon="x"
       ></calcite-action>
+    </calcite-value-list-item>
+    <calcite-value-list-item
+      label="Cats"
+      value="cats"
+      tabindex="-1"
+      data-id="calcite-value-list-item-34786e43-9c6b-ae84-ccbe-39dff05de31e"
+    >
       <calcite-action
-          slot="actions-end"
-          label="click-me"
-          onclick="console.log('clicked');"
-          appearance="clear"
-          scale="s"
-          icon="information"
-        ></calcite-action>
-      </calcite-pick-list-item>
-      <calcite-pick-list-item
-        label="Triceratops"
-        description="3 horn"
-        value="triceratops"
-        selected=""
-      >
-        <calcite-action
-          slot="actions-end"
-          label="click-me"
-          onclick="console.log('clicked');"
-          appearance="clear"
-          scale="s"
-          icon="information"
-        ></calcite-action>
-      </calcite-pick-list-item>
-      <calcite-pick-list-item label="hi" description="there" value="helloWorld">
-        <calcite-action
-          slot="actions-end"
-          label="click-me"
-          onclick="console.log('clicked');"
-          appearance="clear"
-          scale="s"
-          icon="information"
-        ></calcite-action>
-      </calcite-pick-list-item>
-    </calcite-pick-list>
+        slot="actions-end"
+        label="click-me"
+        onclick="console.log('clicked');"
+        appearance="clear"
+        scale="s"
+        icon="x"
+      ></calcite-action>
+    </calcite-value-list-item>
+    <calcite-value-list-item
+      label="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel sem ante. Donec vestibulum eros a sodales semper. Quisque nec bibendum dolor. Etiam dui nulla, imperdiet at dignissim eget, feugiat in enim. Duis id posuere ex, vitae commodo massa. Sed nec aliquam enim. In hac habitasse platea dictumst. Nam ut turpis venenatis, laoreet nulla id, consequat urna. Donec sollicitudin posuere purus, eu dictum erat. Curabitur sagittis dolor dignissim mauris mollis, in fringilla risus dictum."
+      value="fish"
+      tabindex="-1"
+      data-id="calcite-value-list-item-86835628-225e-f09f-84c9-8c57ac09be10"
+    >
+      <calcite-action
+        slot="actions-end"
+        label="click-me"
+        onclick="console.log('clicked');"
+        appearance="clear"
+        scale="s"
+        icon="x"
+      ></calcite-action>
+    </calcite-value-list-item>
+  </calcite-value-list>
+  
+
+
+  <h4>Pick List</h4>
+
+
+<calcite-pick-list
+  dir="ltr"
+  multiple=""
+  theme="light"
+  aria-busy="false"
+  aria-disabled="false"
+  role="menu"
+>
+  <calcite-pick-list-item
+    label="T. Rex"
+    description="arm strength impaired"
+    value="trex"
+    aria-checked="false"
+    role="menuitemcheckbox"
+    icon="square"
+    intl-remove="remove"
+  >
+  <calcite-action
+    slot="actions-end"
+    label="click-me"
+    onclick="console.log('clicked');"
+    appearance="clear"
+    scale="s"
+    icon="">
+      <calcite-chip scale="s" appearance="solid" color="grey">
+        9
+      </calcite-chip>
+  </calcite-action>
+  <calcite-action
+    slot="actions-end"
+    label="click-me"
+    onclick="console.log('clicked');"
+    appearance="clear"
+    scale="s"
+    icon="ellipsis">
+  </calcite-action>
+
+  </calcite-pick-list-item>
+  <calcite-pick-list-item
+    label="Triceratops"
+    description="3 horn"
+    value="triceratops"
+    selected=""
+    aria-checked="true"
+    role="menuitemcheckbox"
+    icon="square"
+    intl-remove="remove"
+  >
+    <calcite-action
+      slot="actions-end"
+      label="click-me"
+      onclick="console.log('clicked');"
+      appearance="clear"
+      scale="s"
+      icon="information"
+    ></calcite-action>
+  </calcite-pick-list-item>
+  <calcite-pick-list-item
+    label="hi"
+    description="there"
+    value="helloWorld"
+    aria-checked="false"
+    role="menuitemcheckbox"
+    icon="square"
+    intl-remove="remove"
+  >
+    <calcite-action
+      slot="actions-end"
+      label="click-me"
+      onclick="console.log('clicked');"
+      appearance="clear"
+      scale="s"
+      icon="information"
+    ></calcite-action>
+  </calcite-pick-list-item>
+</calcite-pick-list>
+
+
+
+
 
 
   </calcite-shell-panel>
@@ -141,7 +234,7 @@
         </calcite-tip-manager>
 
 
-  <calcite-shell-panel slot="contextual-panel" position="end">
+  <calcite-shell-panel slot="contextual-panel" position="end" class="wider">
     <p>My Trailing Panel</p>
   </calcite-shell-panel>
 
