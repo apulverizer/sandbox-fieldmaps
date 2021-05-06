@@ -85,7 +85,7 @@
       ></calcite-action>
     </calcite-value-list-item>
     <calcite-value-list-item
-      label="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel sem ante. Donec vestibulum eros a sodales semper. Quisque nec bibendum dolor. Etiam dui nulla, imperdiet at dignissim eget, feugiat in enim. Duis id posuere ex, vitae commodo massa. Sed nec aliquam enim. In hac habitasse platea dictumst. Nam ut turpis venenatis, laoreet nulla id, consequat urna. Donec sollicitudin posuere purus, eu dictum erat. Curabitur sagittis dolor dignissim mauris mollis, in fringilla risus dictum."
+      label="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel sem ante. "
       value="fish"
       tabindex="-1"
       data-id="calcite-value-list-item-86835628-225e-f09f-84c9-8c57ac09be10"
@@ -103,26 +103,37 @@
   
 
 
-  <h4>Pick List</h4>
 
-
-<calcite-pick-list
+<!--  <calcite-block
+  heading="Conditional Expressions"
   dir="ltr"
-  multiple=""
+  summary=""
+  open=""
+  collapsible=""
   theme="light"
-  aria-busy="false"
-  aria-disabled="false"
-  role="menu"
->
-  <calcite-pick-list-item
-    label="New Expression"
-    description="expr12"
-    value="trex"
-    aria-checked="false"
-    role="menuitemcheckbox"
-    icon="square"
-    intl-remove="remove"
-  >
+  intl-collapse="Collapse"
+  intl-expand="Expand"
+> -->
+
+<h4 class="wider">Value List</h4>
+
+    <calcite-pick-list
+      dir="ltr"
+      multiple=""
+      theme="light"
+      aria-busy="false"
+      aria-disabled="false"
+      role="menu"
+    >
+      <calcite-pick-list-item
+        label="New Expression"
+        description="expr12"
+        value="trex"
+        aria-checked="false"
+        role="menuitemcheckbox"
+        icon="square"
+        intl-remove="remove"
+      >
   <calcite-action
     slot="actions-end"
     label="click-me"
@@ -160,10 +171,9 @@
     onclick="console.log('clicked');"
     appearance="clear"
     scale="s"
-    icon=""
-    disabled="">
+    icon="">
       <calcite-chip scale="s" appearance="solid" color="grey">
-        0
+        1
       </calcite-chip>
   </calcite-action>
   <calcite-action
@@ -241,6 +251,7 @@
 
 
 
+<!-- </calcite-block> -->
 
 
 
@@ -291,7 +302,10 @@
 
 
   <calcite-shell-panel slot="contextual-panel" position="end" class="wider">
-    <p>My Trailing Panel</p>
+
+
+
+
   </calcite-shell-panel>
 
 </calcite-shell>
