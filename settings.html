@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Overview</title>
+	<!-- <link rel="stylesheet" type="text/css" href="build/tailwind.css"> -->
+    <script type="module" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.55/dist/calcite/calcite.css"/>
+    <link rel="stylesheet" type="text/css" href="custom.css"/>
+</head>
+<body>
+
+<calcite-shell>
+
+    <calcite-shell-panel slot="primary-panel" position="start" collapsed>
+        <calcite-action-bar slot="action-bar" theme="light">
+            <calcite-action text="Overview" icon="home"></calcite-action>
+            <calcite-action text="Contents" icon="map-contents"></calcite-action>
+            <calcite-action text="Offline" icon="offline"></calcite-action>
+            <calcite-action text="Settings" icon="gear"></calcite-action>
+            <calcite-action text="Sharing" icon="share"></calcite-action>
+            <calcite-action text="Preview" icon="mobile"></calcite-action>
+            <calcite-action text="What's new" slot="bottom-actions" icon="mega-phone"></calcite-action>
+        </calcite-action-bar>
+    </calcite-shell-panel>
+
+    <calcite-panel slot="center-row" heading="Settings">
+        <p>Slotted content!</p>
+    </calcite-panel>
+        
+</calcite-shell>
+      
+</body>
+</html>
