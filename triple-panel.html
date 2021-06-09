@@ -12,36 +12,106 @@
 </head>
 <body>
 
-<calcite-shell>
-
-    <calcite-shell-panel slot="primary-panel" position="start">
-        <calcite-action-bar slot="action-bar" theme="light">
-            <calcite-action text="Overview" icon="home"></calcite-action>
-            <calcite-action text="Contents" icon="map-contents"></calcite-action>
-            <calcite-action text="Offline" icon="offline"></calcite-action>
-            <calcite-action text="Settings" icon="gear"></calcite-action>
-            <calcite-action text="Sharing" icon="share"></calcite-action>
-            <calcite-action text="Preview" icon="mobile"></calcite-action>
-            <calcite-action text="What's new" slot="bottom-actions" icon="mega-phone"></calcite-action>
-        </calcite-action-bar>
-
-        <calcite-panel heading="Leading panel">
-            <p>Slotted content!</p>
-        </calcite-panel>
-
-    </calcite-shell-panel>
-    
-    <calcite-shell-panel slot="contextual-panel" position="end" height-scale="l">
-        <calcite-panel heading="Trailing panel">
-            <p>Slotted content!</p>
-        </calcite-panel>
-    </calcite-shell-panel>
-        
-    <calcite-panel slot="center-row" heading="Center panel">
-        <p>Slotted content!</p>
-    </calcite-panel>
-        
-</calcite-shell>
+    <calcite-shell dir="ltr" class="calcite-theme-light">
+        <header slot="header">
+          <h2>My Shell Header</h2>
+        </header>
+        <calcite-shell-panel
+          slot="primary-panel"
+          position="start"
+          detached-height-scale="l"
+          width-scale="m"
+        >
+          <calcite-action-bar class="calcite-theme-dark" slot="action-bar">
+            <calcite-action-group layout="vertical">
+              <calcite-action
+                text="Add"
+                label="Add Item"
+                icon="plus"
+                appearance="solid"
+                scale="m"
+              ></calcite-action>
+              <calcite-action
+                text="Save"
+                label="Save Item"
+                icon="save"
+                appearance="solid"
+                scale="m"
+              ></calcite-action>
+            </calcite-action-group>
+            <calcite-action-group layout="vertical">
+              <calcite-action
+                text="Layers"
+                label="View Layers"
+                icon="layers"
+                appearance="solid"
+                scale="m"
+              ></calcite-action>
+            </calcite-action-group>
+          </calcite-action-bar>
+          <p>My Leading Panel</p>
+        </calcite-shell-panel>
+        <!-- <div
+          style="
+      width:100%;
+      height:100%;
+      background-image: linear-gradient(45deg, #ccc 25%, transparent 25%),
+        linear-gradient(-45deg, #ccc 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #ccc 75%),
+        linear-gradient(-45deg, transparent 75%, #ccc 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      "
+        ></div>-->
+        <calcite-shell-center-row height-scale="s" position="end" slot="center-row">
+          <div
+            style="
+      width:50vw;
+      background-color: var(--calcite-app-background-content);
+      padding: var(--calcite-app-cap-spacing) var(--calcite-app-side-spacing);
+      "
+          >
+            <span>My Shell Center Row</span>
+          </div>
+        </calcite-shell-center-row>
+        <calcite-shell-panel
+          slot="contextual-panel"
+          position="end"
+          detached-height-scale="l"
+          width-scale="m"
+        >
+          <calcite-action-bar class="calcite-theme-light" slot="action-bar">
+            <calcite-action-group layout="vertical">
+              <calcite-action
+                text="Idea"
+                label="Add Item"
+                icon="lightbulb"
+                appearance="solid"
+                scale="m"
+              ></calcite-action>
+              <calcite-action
+                text="Information"
+                label="Save Item"
+                icon="information"
+                appearance="solid"
+                scale="m"
+              ></calcite-action>
+            </calcite-action-group>
+            <calcite-action-group layout="vertical">
+              <calcite-action
+                text="Question"
+                label="View Layers"
+                icon="question"
+                appearance="solid"
+                scale="m"
+              ></calcite-action>
+            </calcite-action-group>
+          </calcite-action-bar>
+          <p>My Trailing Panel</p>
+        </calcite-shell-panel>
+        <footer slot="footer">My Shell Footer</footer>
+      </calcite-shell>
+      
 
 </body>
 </html>
