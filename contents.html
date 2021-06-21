@@ -81,30 +81,79 @@
             <calcite-block heading="Form elements" dir="ltr" summary="" open="" collapsible="" class="calcite-theme-light" intl-collapse="Collapse" intl-expand="Expand">
               <!-- <calcite-block-section text="Nature" open="" toggle-display="button">
               </calcite-block-section> -->
-              <p>
-                Tempus per volutpat diam tempor mauris parturient vulputate leo id libero
-                quisque. Mattis aliquam dictum venenatis fringilla. Taciti venenatis,
-                ultrices sollicitudin consequat. Sapien fusce est iaculis potenti ut auctor
-                potenti. Nisi malesuada feugiat vulputate vitae porttitor. Nullam nullam
-                nullam accumsan quis magna in. Elementum, nascetur gravida cras scelerisque
-                inceptos aenean inceptos potenti. Lobortis condimentum accumsan posuere
-                curabitur fermentum diam, natoque quisque. Eget placerat sed aptent orci
-                urna fusce magnis. Vel lacus magnis nunc.
-              </p>
+
+              <!-- SELECT: INPUT TYPE -->
+              <calcite-label scale="s">Input type
+                <calcite-select scale="s">
+                  <calcite-option-group label="BASIC">
+                      <calcite-option>Date/Time</calcite-option>
+                      <calcite-option selected>Textarea</calcite-option>
+                      <calcite-option>Textbox</calcite-option>
+                  </calcite-option-group>
+                  <calcite-option-group label="CHOICE">
+                      <calcite-option>Barcode</calcite-option>
+                      <calcite-option>Combobox</calcite-option>
+                      <calcite-option>Radio buttons</calcite-option>
+                  </calcite-option-group>
+                  <calcite-option-group label="LAYOUT">
+                    <calcite-option>Group</calcite-option>
+                  </calcite-option-group>
+                </calcite-select>
+              </calcite-label>
+
+              <!-- TEXTBOX: DISPLAY NAME -->
+              <calcite-label scale="s">Display name<calcite-input placeholder="" scale="s" type="text" required></calcite-input>
+                <calcite-input-message>Input message lorem ipsum</calcite-input-message>
+              </calcite-label>
+
+              <!-- TEXTBOX: PLACEHOLDER -->
+              <calcite-label scale="s">Placeholder<calcite-input placeholder="" scale="s" type="text"></calcite-input>
+              </calcite-label>
+
+              <!-- TEXTAREA: Description-->
+              <calcite-label scale="s">Description<calcite-input placeholder="" scale="s"
+                type="textarea"></calcite-input>
+              </calcite-label>
+
+              <!-- NUMBER: MIN LENGTH-->
+              <calcite-label scale="s">Min. length<calcite-input number-button-type="horizontal"
+                placeholder="0" scale="s" type="number"></calcite-input>
+              </calcite-label>
+
+              <!-- NUMBER: MAX LENGTH-->
+              <calcite-label scale="s">Max. length<calcite-input number-button-type="horizontal"
+                placeholder="256" scale="s" type="number"></calcite-input>
+              </calcite-label>
+
+              <!-- CHECKBOX: REQUIRED -->
+              <calcite-label layout="inline" for="isRequired" scale="s">
+                <calcite-checkbox id="isRequired" name="isRequired" scale="s"></calcite-checkbox>
+                Required
+              </calcite-label>
+
+              <!-- CHECKBOX: ALLOW EDIT -->
+              <calcite-label layout="inline" for="allow-edit" scale="s">
+                <calcite-checkbox checked id="allow-edit" name="allow-edit" scale="s"></calcite-checkbox>
+                Allow mobile users to edit
+              </calcite-label>
+
             </calcite-block>
           
             <calcite-block heading="Fields" dir="ltr" summary="" collapsible="" class="calcite-theme-light" intl-collapse="Collapse" intl-expand="Expand">
-              <p>
-                Tempus per volutpat diam tempor mauris parturient vulputate leo id libero
-                quisque. Mattis aliquam dictum venenatis fringilla. Taciti venenatis,
-                ultrices sollicitudin consequat. Sapien fusce est iaculis potenti ut auctor
-                potenti. Nisi malesuada feugiat vulputate vitae porttitor. Nullam nullam
-                nullam accumsan quis magna in. Elementum, nascetur gravida cras scelerisque
-                inceptos aenean inceptos potenti. Lobortis condimentum accumsan posuere
-                curabitur fermentum diam, natoque quisque. Eget placerat sed aptent orci
-                urna fusce magnis. Vel lacus magnis nunc.
-              </p>
-            </calcite-block>
+
+
+              <calcite-value-list label-editing-enabled filter-placeholder="Filter placeholder">
+                <calcite-value-list-item
+                    label="2018 Generation Alpha Population (Born 2017 or Later) [updated 2019-09-18]"
+                    description="GENALPHACY" value="GENALPHACY"></calcite-value-list-item>
+                <calcite-value-list-item label="2010-2018 Households: Annual Growth Rate (Esri)"
+                    description="HHGRW10-cY-2019-09-18.001-zZYLKJ" value="HHGRW10-cY"></calcite-value-list-item>
+                <calcite-value-list-item label="2010-2018 Households: Annual Growth Rate (Esri)"
+                    description="HHGRW10-cY-2019-09-18.001-zZYYZLKJ" value="HHGRW10-cY2">
+                </calcite-value-list-item>
+            </calcite-value-list>
+
+
 
           </calcite-panel>
            <!-- END: Trailing Panel Content -->
