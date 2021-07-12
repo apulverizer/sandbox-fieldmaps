@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Blue Robot: Sandbox</title>
+    <script type="module" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.59/dist/calcite/calcite.css"/>
+    <link rel="stylesheet" type="text/css" href="calcite-overrides.css"/>
+</head>
+<body>
+
+    <calcite-shell dir="ltr" class="calcite-theme-light">
+        <!-- START: Global Nav -->
+        <header slot="header">
+          <h2>My Shell Header</h2>
+        </header>
+        <!-- START: Global Nav -->
+
+        <calcite-shell-panel slot="primary-panel" position="start" detached-height-scale="l" width-scale="m">
+          
+          <!-- START: ActionBar -->
+          <calcite-action-bar class="calcite-theme-light" slot="action-bar">
+            <calcite-action text="Overview" icon="home"></calcite-action>
+            <calcite-action text="Contents" icon="map-contents"></calcite-action>
+            <calcite-action text="Offline" icon="offline"></calcite-action>
+            <calcite-action text="Settings" icon="gear"></calcite-action>
+            <calcite-action text="Sharing" icon="share"></calcite-action>
+            <calcite-action text="Preview" icon="mobile"></calcite-action>
+            <calcite-action text="What's new" slot="bottom-actions" icon="mega-phone"></calcite-action>
+          </calcite-action-bar>
+          <!-- END: ActionBar -->
+          
+          <!-- START: Leading Panel Content -->
+          <calcite-panel dir="ltr" heading="Content" class="calcite-theme-light">
+            <!-- <h3 class="heading" slot="header-content">Heading</h3> -->
+            <calcite-pick-list dir="ltr" filter-enabled="" class="calcite-theme-light" aria-busy="false" aria-disabled="false" role="menu">
+              <calcite-pick-list-group group-title="Layers">
+                <calcite-pick-list-item label="one" description="fish" value="one" icon="grip" intl-remove="remove">
+                  <calcite-action slot="actions-end" label="click-me" onclick="console.log('clicked');" appearance="clear" scale="s" icon="ellipsis"
+                  ></calcite-action>
+                </calcite-pick-list-item>
+                <calcite-pick-list-item label="two" description="fish" value="two" icon="grip" tabindex="-1" intl-remove="remove">
+                  <calcite-action slot="actions-end" label="click-me" onclick="console.log('clicked');" appearance="clear" scale="s" icon="ellipsis"
+                  ></calcite-action>
+                </calcite-pick-list-item>
+              </calcite-pick-list-group>
+
+              <calcite-pick-list-group group-title="Tables">
+                <calcite-pick-list-item label="one" description="fish" value="one" icon="grip" intl-remove="remove">
+                  <calcite-action slot="actions-end" label="click-me" onclick="console.log('clicked');" appearance="clear" scale="s" icon="ellipsis"
+                  ></calcite-action>
+                </calcite-pick-list-item>
+                <calcite-pick-list-item label="two" description="fish" value="two" icon="grip" tabindex="-1" intl-remove="remove">
+                  <calcite-action slot="actions-end" label="click-me" onclick="console.log('clicked');" appearance="clear" scale="s" icon="ellipsis"
+                  ></calcite-action>
+                </calcite-pick-list-item>
+              </calcite-pick-list-group>
+
+              <calcite-pick-list-group group-title="Basemap">
+                <calcite-pick-list-item label="one" description="fish" value="one" icon="grip" intl-remove="remove">
+                  <calcite-action slot="actions-end" label="click-me" onclick="console.log('clicked');" appearance="clear" scale="s" icon="ellipsis"
+                  ></calcite-action>
+                </calcite-pick-list-item>
+              </calcite-pick-list-group>
+
+            </calcite-pick-list>
+
+          </calcite-panel>
+          <!-- END: Leading Panel Content -->
+        </calcite-shell-panel>
+
+        <calcite-shell-center-row height-scale="s" position="end" slot="center-row">
+            <span>My Shell Center Row</span>
+        </calcite-shell-center-row>
+
+
+        <calcite-shell-panel slot="contextual-panel" position="end" detached-height-scale="l" width-scale="m">
+          <!-- START: Trailing Panel Content -->
+          <calcite-panel dir="ltr" intl-close="Close" heading="Properties" class="calcite-theme-light">
+
+            <calcite-block heading="Form elements" dir="ltr" summary="" open="" collapsible="" class="calcite-theme-light" intl-collapse="Collapse" intl-expand="Expand">
+              <!-- List of FORM ELEMENTS -->
+              <calcite-list>
+                <calcite-list-item label="Bananas" description="A banana is an elongated, edible fruit.">
+                  <calcite-icon icon="banana" slot="content-end"></calcite-icon>
+                </calcite-list-item>
+                <calcite-list-item label="Bananas" description="A banana is an elongated, edible fruit.">
+                  <calcite-icon icon="banana" slot="content-end"></calcite-icon>
+                </calcite-list-item>
+                <calcite-list-item label="Bananas" description="A banana is an elongated, edible fruit.">
+                  <calcite-icon icon="banana" slot="content-end"></calcite-icon>
+                </calcite-list-item>
+                <calcite-list-item label="Bananas" description="A banana is an elongated, edible fruit.">
+                  <calcite-icon icon="banana" slot="content-end"></calcite-icon>
+                </calcite-list-item>
+              </calcite-list>
+            </calcite-block>
+
+            <calcite-block heading="Fields" dir="ltr" summary="" collapsible="" class="calcite-theme-light" intl-collapse="Collapse" intl-expand="Expand">
+              <!-- List of FORM ELEMENTS -->
+              <calcite-list>
+                <calcite-list-item label="Bananas" description="A banana is an elongated, edible fruit.">
+                  <calcite-icon icon="banana" slot="content-end"></calcite-icon>
+                </calcite-list-item>
+                <calcite-list-item label="Bananas" description="A banana is an elongated, edible fruit.">
+                  <calcite-icon icon="banana" slot="content-end"></calcite-icon>
+                </calcite-list-item>
+                <calcite-list-item label="Bananas" description="A banana is an elongated, edible fruit.">
+                  <calcite-icon icon="banana" slot="content-end"></calcite-icon>
+                </calcite-list-item>
+                <calcite-list-item label="Bananas" description="A banana is an elongated, edible fruit.">
+                  <calcite-icon icon="banana" slot="content-end"></calcite-icon>
+                </calcite-list-item>
+              </calcite-list>
+            </calcite-block>
+
+          </calcite-panel>
+           <!-- END: Trailing Panel Content -->
+        </calcite-shell-panel>
+
+      </calcite-shell>
+      
+
+</body>
+</html>
