@@ -1,3 +1,13 @@
-.block-layout .content {
-    padding: 0rem 0rem;   
+.block-heading {
+    margin-top: 48px;
+    margin-bottom: 24px;
+    margin-left: 64px;
+    margin-right: 64px;
+}
+.block-content {
+    margin-left: 64px;
+    margin-right: 64px;
+}
+.block-last {
+    margin-bottom: 24px;
 }
