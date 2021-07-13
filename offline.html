@@ -7,6 +7,7 @@
     <script type="module" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.js"></script>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.59/dist/calcite/calcite.css"/>
+    <link rel="stylesheet" type="text/css" href="calcite-overrides.css"/>
 </head>
 <body>
 
@@ -25,7 +26,30 @@
     </calcite-shell-panel>
 
     <calcite-panel slot="center-row" heading="Offline">
-        <p>Slotted content!</p>
+        
+        <div class="block-heading">
+            <p>Enabling offline mode allows this map to be downloaded and used in locations where there may be no internet connectivity. When offline mode is enabled, a user can download the map in apps that support offline workflows.</p>
+            <calcite-label layout="inline" scale="l">Offline<calcite-switch name="Offline" scale="l" value="offline">
+            </calcite-switch>
+            </calcite-label>
+        </div>
+
+        <calcite-block heading="Content" dir="ltr" collapsible="" class="calcite-theme-light block-content" intl-collapse="Collapse" intl-expand="Expand">
+        </calcite-block>
+
+        <calcite-block heading="Map areas" dir="ltr" collapsible="" class="calcite-theme-light block-content" intl-collapse="Collapse" intl-expand="Expand">
+            <p>While not required, it is recommended that you create map areas ahead of time to package data for specific areas you expect to be used offline. Using map areas makes taking maps offline easier and faster.</p>
+        </calcite-block>
+
+        <calcite-block heading="Features and attachment delivery" dir="ltr" collapsible="" class="calcite-theme-light block-content" intl-collapse="Collapse" intl-expand="Expand">
+            <p>Adjusting how attachments and features are delivered can reduce the time it takes to synchronize edits, especially in areas of poor connectivity, as well as the amount of cellular data used.</p>
+        </calcite-block>
+
+        <calcite-block heading="Use a tile package for the offline basemap" dir="ltr" collapsible="" class="calcite-theme-light block-content block-last" intl-collapse="Collapse" intl-expand="Expand">
+            <p>Using a tile package as a basemap instead of the basemap currently in your map allows you to download a larger and more detailed basemap for offline use when required. </p>
+        </calcite-block>
+
+
     </calcite-panel>
         
 </calcite-shell>
