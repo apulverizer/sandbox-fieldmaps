@@ -29,14 +29,44 @@
         
         <div class="block-heading">
             <p class="block-heading-minor">Enabling offline mode allows this map to be downloaded and used in locations where there may be no internet connectivity. When offline mode is enabled, a user can download the map in apps that support offline workflows.</p>
-
             <calcite-label layout="inline" scale="l">Offline<calcite-switch name="Offline" scale="l" value="offline">
             </calcite-switch>
             </calcite-label>
-
         </div>
 
         <calcite-block heading="Content" dir="ltr" collapsible="" class="calcite-theme-light block-content" intl-collapse="Collapse" intl-expand="Expand">
+            <calcite-tree>
+                <calcite-tree-item>Layers<calcite-tree slot="children">
+                        <calcite-tree-item>Layer 1</calcite-tree-item>
+                        <calcite-tree-item>Layer 2<calcite-tree slot="children">
+                                <calcite-tree-item>Great-grandchild 1</calcite-tree-item>
+                                <calcite-tree-item>Great-grandchild 2<calcite-tree slot="children">
+                                        <calcite-tree-item>Great-great-grandchild 1</calcite-tree-item>
+                                        <calcite-tree-item>Great-great-grandchild 2<calcite-tree
+                                                slot="children">
+                                                <calcite-tree-item>Great-great-great-grandchild 1
+                                                </calcite-tree-item>
+                                                <calcite-tree-item>Great-great-great-grandchild 2
+                                                </calcite-tree-item>
+                                            </calcite-tree>
+                                        </calcite-tree-item>
+                                    </calcite-tree>
+                                </calcite-tree-item>
+                            </calcite-tree>
+                        </calcite-tree-item>
+                    </calcite-tree>
+                </calcite-tree-item>
+                <calcite-tree-item>Tables<calcite-tree slot="children">
+                        <calcite-tree-item>Table 1</calcite-tree-item>
+                        <calcite-tree-item>Table 2</calcite-tree-item>
+                    </calcite-tree>
+                </calcite-tree-item>
+                <calcite-tree-item>Basemaps<calcite-tree slot="children">
+                    <calcite-tree-item>Basemap 1</calcite-tree-item>
+                    <calcite-tree-item>Basemap 2</calcite-tree-item>
+                </calcite-tree>
+            </calcite-tree-item>
+            </calcite-tree>
         </calcite-block>
 
         <calcite-block heading="Map areas" dir="ltr" collapsible="" class="calcite-theme-light block-content" intl-collapse="Collapse" intl-expand="Expand">
@@ -49,6 +79,10 @@
 
         <calcite-block heading="Use a tile package for the offline basemap" dir="ltr" collapsible="" class="calcite-theme-light block-content block-last" intl-collapse="Collapse" intl-expand="Expand">
             <p>Using a tile package as a basemap instead of the basemap currently in your map allows you to download a larger and more detailed basemap for offline use when required. </p>
+            <calcite-radio-button-group layout="vertical" name="Radio Group Label">
+                <calcite-radio-button value="option-1" checked>Device will use the basemap defined by the web map.</calcite-radio-button>
+                <calcite-radio-button value="option-2">Device will use a tile package it already has.</calcite-radio-button>
+            </calcite-radio-button-group>
         </calcite-block>
 
 
