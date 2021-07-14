@@ -71,18 +71,59 @@
 
         <calcite-block heading="Map areas" dir="ltr" collapsible="" class="calcite-theme-light block-content" intl-collapse="Collapse" intl-expand="Expand">
             <p>While not required, it is recommended that you create map areas ahead of time to package data for specific areas you expect to be used offline. Using map areas makes taking maps offline easier and faster.</p>
+            <!-- <calcite-button appearance="outline" color="blue" scale="m" href="" alignment="right" width="auto">Manage areas</calcite-button> -->
         </calcite-block>
 
         <calcite-block heading="Features and attachment delivery" dir="ltr" collapsible="" class="calcite-theme-light block-content" intl-collapse="Collapse" intl-expand="Expand">
             <p>Adjusting how attachments and features are delivered can reduce the time it takes to synchronize edits, especially in areas of poor connectivity, as well as the amount of cellular data used.</p>
+
+            <calcite-label>Editable features
+            <calcite-radio-button-group name="simple" layout="vertical" scale="m">
+                <calcite-label layout="inline">
+                    <calcite-radio-button value="edit-01" checked></calcite-radio-button>
+                    Device will download and get updates to features and attachments.
+                </calcite-label>
+                <calcite-label layout="inline">
+                    <calcite-radio-button value="edit-02"></calcite-radio-button>
+                    Device will download and get updates for features only.
+                </calcite-label>
+                <calcite-label layout="inline">
+                    <calcite-radio-button value="edit-03"></calcite-radio-button>
+                    Device will never download and get updates for features.
+                </calcite-label>
+            </calcite-radio-button-group>
+            </calcite-label>
+
+            <calcite-label>Read-only features
+            <calcite-radio-button-group name="simple" layout="vertical" scale="m">
+                <calcite-label layout="inline">
+                    <calcite-radio-button value="read-01" checked></calcite-radio-button>
+                    Device will download and get updates for features and attachments.
+                </calcite-label>
+                <calcite-label layout="inline">
+                    <calcite-radio-button value="read-02"></calcite-radio-button>
+                    Device will download and get updates for features only.
+                </calcite-label>
+            </calcite-radio-button-group>
+            </calcite-label>
+            
+            
         </calcite-block>
 
         <calcite-block heading="Use a tile package for the offline basemap" dir="ltr" collapsible="" class="calcite-theme-light block-content block-last" intl-collapse="Collapse" intl-expand="Expand">
             <p>Using a tile package as a basemap instead of the basemap currently in your map allows you to download a larger and more detailed basemap for offline use when required. </p>
-            <calcite-radio-button-group layout="vertical" name="Radio Group Label">
-                <calcite-radio-button value="option-1" checked>Device will use the basemap defined by the web map.</calcite-radio-button>
-                <calcite-radio-button value="option-2">Device will use a tile package it already has.</calcite-radio-button>
+
+            <calcite-radio-button-group name="simple" layout="vertical" scale="m">
+                <calcite-label layout="inline">
+                    <calcite-radio-button value="opt1" checked></calcite-radio-button>
+                    Device will use the basemap defined by the web map.
+                </calcite-label>
+                <calcite-label layout="inline">
+                    <calcite-radio-button value="op2"></calcite-radio-button>
+                    Device will use a tile package it already has.
+                </calcite-label>
             </calcite-radio-button-group>
+              
         </calcite-block>
 
 
