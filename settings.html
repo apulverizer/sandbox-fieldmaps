@@ -6,7 +6,7 @@
 	<title>Blue Robot: Sandbox</title>
     <script type="module" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.59/dist/calcite/calcite.css"/>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.63/dist/calcite/calcite.css"/>
     <link rel="stylesheet" type="text/css" href="calcite-overrides.css"/>
 </head>
 <body>
@@ -103,6 +103,41 @@
             <calcite-block-section text="Required" toggle-display="button" intl-collapse="Collapse" intl-expand="Expand">
             </calcite-block-section>
             <calcite-block-section text="Track category" toggle-display="button" intl-collapse="Collapse" intl-expand="Expand">
+            
+                <calcite-label scale="m">
+                    Track categories
+                <calcite-combobox label="Combobox label" placeholder="Select industry" scale="m">
+                    <calcite-combobox-item value="Engineering" text-label="Engineering">
+                        <calcite-combobox-item value="Architecture" text-label="Architecture">
+                            <calcite-combobox-item value="Nested item" text-label="Nested item">
+                            </calcite-combobox-item>
+                        </calcite-combobox-item>
+                        <calcite-combobox-item value="Disabled item" disabled text-label="Disabled item">
+                        </calcite-combobox-item>
+                        <calcite-combobox-item value="Construction" text-label="Construction">
+                        </calcite-combobox-item>
+                    </calcite-combobox-item>
+                    <calcite-combobox-item value="Public Safety" text-label="Public Safety">
+                        <calcite-combobox-item value="Fire, Rescure, and EMS" text-label="Fire, Rescure, and EMS">
+                        </calcite-combobox-item>
+                        <calcite-combobox-item value="Homeland Security" text-label="Homeland Security">
+                        </calcite-combobox-item>
+                        <calcite-combobox-item value="Law Enforcement" text-label="Law Enforcement">
+                        </calcite-combobox-item>
+                    </calcite-combobox-item>
+                    <calcite-combobox-item value="Natural Resources" text-label="Natural Resources">
+                        <calcite-combobox-item value="Agriculture" text-label="Agriculture"></calcite-combobox-item>
+                        <calcite-combobox-item value="Forestry" text-label="Forestry"></calcite-combobox-item>
+                        <calcite-combobox-item value="Mining" text-label="Mining"></calcite-combobox-item>
+                    </calcite-combobox-item>
+                    <calcite-combobox-item value="Business" text-label="Business"></calcite-combobox-item>
+                    <calcite-combobox-item value="Education" text-label="Education"></calcite-combobox-item>
+                    <calcite-combobox-item value="Utilities" text-label="Utilities"></calcite-combobox-item>
+                </calcite-combobox>
+                <calcite-input-message active>Add categories to use when filtering tracks outside of Field Maps.</calcite-input-message>
+                </calcite-label>
+            
+            
             </calcite-block-section>
         </calcite-block>
 
