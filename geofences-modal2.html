@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Blue Robot: Sandbox</title>
+    <script type="module" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.69/dist/calcite/calcite.css"/>
+    <link rel="stylesheet" type="text/css" href="calcite-overrides.css"/>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.21/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.21/"></script>   
+
+    <script>
+      require(["esri/Map", "esri/views/MapView"], (Map, MapView) => {
+        const map = new Map({
+          basemap: "topo-vector"
+        });
+
+        const view = new MapView({
+          container: "mapView",
+          map: map,
+          zoom: 4,
+          center: [15, 65] // longitude, latitude
+        });
+      });
+    </script>
+</head>
+<body>
+
+  <calcite-modal aria-labelledby="modal-title" active>
+    <div slot="header" id="modal-title">Create a Geotrigger: Add a filter</div>
+    <div slot="content">
+      <div id="mapView" style="height:300px; width:100%"></div>
+      <arcgis-filter class="sc-arcgis-filter-h sc-arcgis-filter-s hydrated">
+        <calcite-panel id="filter-panel" class="panel sc-arcgis-filter" intl-back="Back" intl-close="Close"
+          intl-open="Open" calcite-hydrated="">
+          <calcite-action id="arcgis-filter-close" slot="header-actions-end" class="sc-arcgis-filter"
+            appearance="solid" scale="s" calcite-hydrated="">
+            <calcite-icon class="sc-arcgis-filter" aria-hidden="true" icon="x" scale="m" calcite-hydrated="">
+            </calcite-icon>
+          </calcite-action>
+          <!-- <calcite-button slot="footer-actions" class="sc-arcgis-filter" alignment="center" appearance="solid"
+            color="blue" scale="m" width="half" calcite-hydrated="">Save</calcite-button>
+          <calcite-button slot="footer-actions" class="sc-arcgis-filter" alignment="center" appearance="outline"
+            color="blue" scale="m" width="half" calcite-hydrated="">Cancel</calcite-button> -->
+          <div id="arcgis-filter-hook" class="hook sc-arcgis-filter"></div>
+          <calcite-fab class="autofocus sc-arcgis-filter" slot="fab" appearance="outline" color="neutral" scale="s"
+            text-enabled="" calcite-hydrated=""></calcite-fab>
+          <calcite-tip class="sc-arcgis-filter" non-dismissible="" calcite-hydrated="">
+            <div class="sc-arcgis-filter">Filters highlight features that matter to you. Features not matching the
+              query appear in a dimmed style until the filter is saved.</div>
+          </calcite-tip>
+        </calcite-panel>
+      </arcgis-filter>
+    </div>
+    <calcite-button slot="back" color="light" appearance="outline" icon="chevron-left" width="full">
+        Back</calcite-button>
+    <calcite-button slot="secondary" width="full" appearance="outline">Cancel</calcite-button>
+    <calcite-button slot="primary" width="full">Next</calcite-button>
+</calcite-modal>
+      
+
+</body>
+</html>

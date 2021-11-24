@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Blue Robot: Sandbox</title>
+    <script type="module" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.69/dist/calcite/calcite.css"/>
+    <link rel="stylesheet" type="text/css" href="calcite-overrides.css"/>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.21/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.21/"></script>   
+
+    <script>
+      require(["esri/Map", "esri/views/MapView"], (Map, MapView) => {
+        const map = new Map({
+          basemap: "topo-vector"
+        });
+
+        const view = new MapView({
+          container: "mapView",
+          map: map,
+          zoom: 4,
+          center: [15, 65] // longitude, latitude
+        });
+      });
+    </script>
+</head>
+<body>
+
+  <calcite-modal aria-labelledby="modal-title" active>
+    <div slot="header" id="modal-title">Create a Geotrigger: Define a filter</div>
+    <div slot="content">
+      <calcite-label scale="s">Select a layer
+        <calcite-select scale="s">
+          <calcite-option seleted>Parcels</calcite-option>
+          <calcite-option>Rivers</calcite-option>
+          <calcite-option>Trees</calcite-option>
+        </calcite-select>
+      </calcite-label> 
+
+      <div id="mapView" style="height:300px; width:100%"></div>
+
+      <calcite-label scale="s">Buffer<calcite-input number-button-type="horizontal"
+        placeholder="0" scale="s" type="number"></calcite-input>
+      </calcite-label>
+    </div>
+    <calcite-button slot="secondary" width="full" appearance="outline">Cancel</calcite-button>
+    <calcite-button slot="primary" width="full">Next</calcite-button>
+</calcite-modal>
+      
+
+</body>
+</html>

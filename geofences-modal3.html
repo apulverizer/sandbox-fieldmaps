@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Blue Robot: Sandbox</title>
+    <script type="module" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.69/dist/calcite/calcite.css"/>
+    <link rel="stylesheet" type="text/css" href="calcite-overrides.css"/>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.21/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.21/"></script>
+</head>
+<body>
+
+  <calcite-modal aria-labelledby="modal-title" active>
+    <div slot="header" id="modal-title">Create a Geotrigger: Select an action</div>
+    <div slot="content">
+      <calcite-pick-list>
+        <calcite-pick-list-item label="Notify on enter" description="Notify the mobile user when they enter an area" value="notifyOnEnter">
+            <calcite-action slot="actions-end" icon="bell"></calcite-action>
+        </calcite-pick-list-item>
+        <calcite-pick-list-item label="Notify on exit" description="Notify the mobile user when they exit an area" value="notifyOnEnter">
+          <calcite-action slot="actions-end" icon="bell"></calcite-action>
+      </calcite-pick-list-item>
+        <calcite-pick-list-item label="Track within" description="Only track the mobile users location when they are inside an area" value="trackInside" selected>
+            <calcite-action slot="actions-end" icon="gps-on"></calcite-action>
+        </calcite-pick-list-item>
+        <calcite-pick-list-item label="Track outside" description="Only track the mobile users location when they not inside any area" value="trackOutside">
+            <calcite-action slot="actions-end" icon="gps-on"></calcite-action>
+        </calcite-pick-list-item>
+        <calcite-pick-list-item label="Custom" description="Define a custom action" value="custom">
+          <calcite-action slot="actions-end" icon="code"></calcite-action>
+        </calcite-pick-list-item>
+    </calcite-pick-list>
+    </div>
+    <calcite-button slot="back" color="light" appearance="outline" icon="chevron-left" width="full">
+      Back</calcite-button>
+    <calcite-button slot="secondary" width="full" appearance="outline">Cancel</calcite-button>
+    <calcite-button slot="primary" width="full">Finish</calcite-button>
+</calcite-modal>
+      
+
+</body>
+</html>

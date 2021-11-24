@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Blue Robot: Sandbox</title>
+    <script type="module" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/@esri/calcite-components/dist/calcite/calcite.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@esri/calcite-components@1.0.0-beta.69/dist/calcite/calcite.css"/>
+    <link rel="stylesheet" type="text/css" href="calcite-overrides.css"/>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.21/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.21/"></script>   
+
+    <script>
+      require(["esri/Map", "esri/views/MapView"], (Map, MapView) => {
+        const map = new Map({
+          basemap: "topo-vector"
+        });
+
+        const view = new MapView({
+          container: "mapView",
+          map: map,
+          zoom: 4,
+          center: [15, 65] // longitude, latitude
+        });
+      });
+    </script>
+</head>
+<body>
+
+    <calcite-shell dir="ltr" class="calcite-theme-light">
+        <!-- START: Global Nav -->
+        <header slot="header">
+          <h2>Field Maps</h2>
+        </header>
+        <!-- START: Global Nav -->
+
+        <calcite-shell-panel slot="primary-panel" position="start" detached-height-scale="l" width-scale="m">
+          
+          <!-- START: ActionBar -->
+          <calcite-action-bar class="calcite-theme-light" slot="action-bar">
+            <calcite-action text="Overview" icon="home"></calcite-action>
+            <calcite-action text="Contents" icon="map-contents"></calcite-action>
+            <calcite-action text="Offline" icon="offline"></calcite-action>
+            <calcite-action text="Settings" icon="gear"></calcite-action>
+            <calcite-action text="Geofences" icon="pin"></calcite-action>
+            <calcite-action text="Sharing" icon="share"></calcite-action>
+            <calcite-action text="Preview" icon="mobile"></calcite-action>
+            <calcite-action text="What's new" slot="bottom-actions" icon="mega-phone"></calcite-action>
+          </calcite-action-bar>
+          <!-- END: ActionBar -->
+          
+          <!-- START: Leading Panel Content -->
+          <calcite-panel dir="ltr" heading="Geotriggers" class="calcite-theme-light">
+            <!-- <h3 class="heading" slot="header-content">Heading</h3> -->
+            <calcite-button data-test-add-layer-btn="" class="mt-1 px-2" alignment="start" appearance="transparent" color="neutral" icon-start="plusCircle" scale="s" width="full" calcite-hydrated="">
+              <span class="font-medium mx-1 py-1">
+                Add GeoTrigger
+              </span>
+            </calcite-button>
+            <calcite-pick-list dir="ltr" filter-enabled="false" class="calcite-theme-light" aria-busy="false" aria-disabled="false" role="menu">
+              <calcite-pick-list-group group-title="On Device">
+                <calcite-pick-list-item label="Hazardous Parcels" description="" value="Hazardous Parcels" icon="grip" intl-remove="remove">
+                  <calcite-action slot="actions-end" label="click-me" onclick="console.log('clicked');" appearance="clear" scale="s" icon="ellipsis"
+                  ></calcite-action>
+                </calcite-pick-list-item>
+                <calcite-pick-list-item label="Tracking" description="" value="Tracking" icon="grip" tabindex="-1" intl-remove="remove">
+                  <calcite-action slot="actions-end" label="click-me" onclick="console.log('clicked');" appearance="clear" scale="s" icon="ellipsis"
+                  ></calcite-action>
+                </calcite-pick-list-item>
+              </calcite-pick-list-group>
+
+            </calcite-pick-list>
+
+          </calcite-panel>
+          <!-- END: Leading Panel Content -->
+        </calcite-shell-panel>
+
+        <calcite-shell-center-row height-scale="s" position="end" slot="center-row">
+            <div id="mapView" style="widtH:100%"></div>
+        </calcite-shell-center-row>
+
+
+        <calcite-shell-panel slot="contextual-panel" position="end" detached-height-scale="l" width-scale="m">
+
+          <calcite-action-bar slot="action-bar">
+            <calcite-action-group>
+                <calcite-action text="Properties" active icon="gear"></calcite-action>
+                <calcite-action text="Filter" icon="filter" ></calcite-action>
+            </calcite-action-group>
+          </calcite-action-bar>
+
+          <!-- START: Trailing Panel Content -->
+          <calcite-panel dir="ltr" intl-close="Close" heading="Hazard Parcels" class="calcite-theme-light">
+            <!-- <h3 class="heading" slot="header-content">Form builder</h3> -->
+
+            <calcite-block heading="Geotrigger" dir="ltr" summary="" open="" collapsible="" class="calcite-theme-light" intl-collapse="Collapse" intl-expand="Expand">
+
+              <calcite-label scale="s">Name<calcite-input placeholder="" scale="s" type="text" value="Hazardous Parcels"></calcite-input>
+              </calcite-label>
+
+              <calcite-label scale="s">Source<calcite-input placeholder="" scale="s" type="text" value="Device Location" disabled=""></calcite-input>
+              </calcite-label>
+
+              <calcite-label scale="s">Geofences<calcite-input placeholder="" scale="s" type="text" value="Parcels" disabled=""></calcite-input>
+              </calcite-label>
+
+              <calcite-label scale="s">Buffer<calcite-input number-button-type="horizontal"
+                placeholder="0" scale="s" type="number"></calcite-input>
+              </calcite-label>
+
+              <calcite-label scale="s">Actions
+                <!-- <calcite-select scale="s">
+                  <calcite-option seleted>Notify</calcite-option>
+                  <calcite-option>Start Tracking</calcite-option>
+                  <calcite-option>Stop Tracking</calcite-option>
+                  <calcite-option>Stop Tracking</calcite-option>
+                </calcite-select> -->
+
+                <calcite-combobox scale="s" allow-custom-values>
+                  <calcite-combobox-item value="notify" text-label="Notify"></calcite-combobox-item>
+                  <calcite-combobox-item value="startTracking" text-label="Start tracking"></calcite-combobox-item>
+                  <calcite-combobox-item value="stopTracking" text-label="Stop tracking"></calcite-combobox-item>
+                </calcite-combobox>
+              </calcite-label> 
+
+              <calcite-label scale="s">Event
+                <calcite-select scale="s">
+                  <calcite-option>On Enter</calcite-option>
+                  <calcite-option>On Exit</calcite-option>
+                  <calcite-option>On Enter or Exit</calcite-option>
+                </calcite-select>
+              </calcite-label>
+
+              <calcite-accordion scale="s">
+                <calcite-accordion-item icon="code" item-title="Expression" scale="s">
+                  <div style="width:100%">
+                    <iframe style="width:100%; height:400px" src="https://nitro.mapsdevext.arcgis.com/home/arcade-editor/index.html?basic=true&amp;disableTest=true&amp;locale=en&amp"></iframe>
+                  </div>
+                </calcite-accordion-item>
+              </calcite-accordion>
+            </calcite-block>
+        </calcite-shell-panel>
+
+      </calcite-shell>
+      
+
+</body>
+</html>
