@@ -55,22 +55,20 @@
             <!-- <h3 class="heading" slot="header-content">Heading</h3> -->
             <calcite-button data-test-add-layer-btn="" class="mt-1 px-2" alignment="start" appearance="transparent" color="neutral" icon-start="plusCircle" scale="s" width="full" calcite-hydrated="">
               <span class="font-medium mx-1 py-1">
-                Add GeoTrigger
+                Add a Geotrigger
               </span>
             </calcite-button>
-            <calcite-pick-list dir="ltr" filter-enabled="false" class="calcite-theme-light" aria-busy="false" aria-disabled="false" role="menu">
-              <calcite-pick-list-group group-title="On Device">
-                <calcite-pick-list-item label="Hazardous Parcels" description="" value="Hazardous Parcels" icon="grip" intl-remove="remove">
-                  <calcite-action slot="actions-end" label="click-me" onclick="console.log('clicked');" appearance="clear" scale="s" icon="ellipsis"
-                  ></calcite-action>
-                </calcite-pick-list-item>
-                <calcite-pick-list-item label="Tracking" description="" value="Tracking" icon="grip" tabindex="-1" intl-remove="remove">
-                  <calcite-action slot="actions-end" label="click-me" onclick="console.log('clicked');" appearance="clear" scale="s" icon="ellipsis"
-                  ></calcite-action>
-                </calcite-pick-list-item>
-              </calcite-pick-list-group>
+            <calcite-value-list dir="ltr" filter-enabled="false" class="calcite-theme-light" aria-busy="false" aria-disabled="false" role="menu">
+              <calcite-value-list-item selected label="Hazardous Parcels" description="" value="Hazardous Parcels" icon="grip" intl-remove="remove">
+                <calcite-action slot="actions-end" label="click-me" onclick="console.log('clicked');" appearance="clear" scale="s" icon="ellipsis"
+                ></calcite-action>
+              </calcite-value-list-item>
+              <calcite-value-list-item label="Tracking" description="" value="Tracking" icon="grip" tabindex="-1" intl-remove="remove">
+                <calcite-action slot="actions-end" label="click-me" onclick="console.log('clicked');" appearance="clear" scale="s" icon="ellipsis"
+                ></calcite-action>
+              </calcite-value-list-item>
 
-            </calcite-pick-list>
+            </calcite-value-list>
 
           </calcite-panel>
           <!-- END: Leading Panel Content -->
@@ -105,8 +103,8 @@
               <calcite-label scale="s">Geofences<calcite-input placeholder="" scale="s" type="text" value="Parcels" disabled=""></calcite-input>
               </calcite-label>
 
-              <calcite-label scale="s">Buffer<calcite-input number-button-type="horizontal"
-                placeholder="0" scale="s" type="number"></calcite-input>
+              <calcite-label scale="s">Buffer<calcite-input number-button-type="vertical"
+                placeholder="0" scale="s" type="number" value="5"></calcite-input>
               </calcite-label>
 
               <calcite-label scale="s">Actions
@@ -119,8 +117,8 @@
 
                 <calcite-combobox scale="s" allow-custom-values>
                   <calcite-combobox-item value="notify" text-label="Notify"></calcite-combobox-item>
-                  <calcite-combobox-item value="startTracking" text-label="Start tracking"></calcite-combobox-item>
-                  <calcite-combobox-item value="stopTracking" text-label="Stop tracking"></calcite-combobox-item>
+                  <calcite-combobox-item selected value="startTracking" text-label="Start tracking"></calcite-combobox-item>
+                  <calcite-combobox-item selected value="stopTracking" text-label="Stop tracking"></calcite-combobox-item>
                 </calcite-combobox>
               </calcite-label> 
 
@@ -128,7 +126,7 @@
                 <calcite-select scale="s">
                   <calcite-option>On Enter</calcite-option>
                   <calcite-option>On Exit</calcite-option>
-                  <calcite-option>On Enter or Exit</calcite-option>
+                  <calcite-option selected>On Enter or Exit</calcite-option>
                 </calcite-select>
               </calcite-label>
 
